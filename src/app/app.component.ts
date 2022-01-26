@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MovieService } from './movie-service.service';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'movie-zone';
+  title = 'Movie Zone';
+  movies$: any = [];
+  defaultSearch: string = 'marvel'
+
+  constructor(private movieService: MovieService) {}
+
+  ngOnInit() {
+    this.movies$ = this.movieService.getMovies(this.defaultSearch)
+        .pipe(
+          map((res:any) => res.Search)
+        )
+  }
 }
