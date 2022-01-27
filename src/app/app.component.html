@@ -1,5 +1,5 @@
 
-<app-header [title]="title"></app-header>
+<app-header></app-header>
 <app-filter-box (searchEvent)="handleMovieSearch($event)"></app-filter-box>
 <p *ngIf="!movies" class="text-center h3 mt-2">No movies found.</p>
 <app-favorite-movies [favoriteMovies]="favoriteMovies"></app-favorite-movies>

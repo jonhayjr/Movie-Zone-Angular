@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./favorite-movies.component.css']
 })
 export class FavoriteMoviesComponent implements OnInit {
-  @Input() favoriteMovies: any = [];
+  @Input() favoriteMovies: any[];
   
   constructor() { }
 

@@ -7,7 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class MovieTileComponent implements OnInit {
 
-  @Input() movie:any;
+  @Input() movie: any;
   @Output() addMovieEvent = new EventEmitter();
   @Output() removeMovieEvent = new EventEmitter();
   

@@ -9,9 +9,9 @@ import { map } from 'rxjs/operators';
 })
 export class AppComponent {
   title = 'Movie Zone';
-  movies: any = [];
+  movies: any[] = [];
   defaultSearch: string = 'marvel';
-  favoriteMovies: any = [];
+  favoriteMovies: any[] = [];
 
   constructor(private movieService: MovieService) {}
 
