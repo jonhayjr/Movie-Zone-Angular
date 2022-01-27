@@ -8,6 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class FilterBoxComponent implements OnInit {
 
   search: string = '';
+  validationAlert: boolean = false;
 
   @Output() searchEvent = new EventEmitter();
 
@@ -17,7 +18,15 @@ export class FilterBoxComponent implements OnInit {
   }
 
   submitSearch() {
-    this.searchEvent.emit(this.search)
+    if (this.search) {
+      this.searchEvent.emit(this.search);
+    } else {
+      this.validationAlert = true;
+    }
+  }
+
+  hideAlert() {
+    this.validationAlert = false;
   }
 
 }

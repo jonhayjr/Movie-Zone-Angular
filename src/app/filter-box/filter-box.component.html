@@ -1,4 +1,12 @@
+<div *ngIf="validationAlert" class="alert alert-warning alert-dismissible fade show text-center w-100 mx-auto" role="alert">
+    <p>Please enter a value in the search box.</p>
+    <button type="button" class="close btn btn-warning w-25" data-dismiss="alert" aria-label="Close" (click)="hideAlert()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
 <form class="input-group mb-3 w-75 mx-auto mt-3" autocomplete="off" #searchForm="ngForm" (ngSubmit)="submitSearch()">
-    <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Search for Movie" name="search" [(ngModel)]="search">
+    <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Search for Movie" name="search" 
+    [(ngModel)]="search">
     <button class="btn-secondary btn">Search</button>
 </form>
