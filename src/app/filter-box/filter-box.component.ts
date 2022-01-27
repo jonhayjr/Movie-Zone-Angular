@@ -20,6 +20,7 @@ export class FilterBoxComponent implements OnInit {
   submitSearch() {
     if (this.search) {
       this.searchEvent.emit(this.search);
+      this.search = '';
     } else {
       this.validationAlert = true;
     }
