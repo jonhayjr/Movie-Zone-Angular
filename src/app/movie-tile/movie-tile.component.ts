@@ -1,4 +1,4 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-movie-tile',
@@ -8,10 +8,15 @@ import { Component, OnInit, Input} from '@angular/core';
 export class MovieTileComponent implements OnInit {
 
   @Input() movie:any;
+  @Output() addMovieEvent = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+  
+  addMovie() {
+    this.addMovieEvent.emit(this.movie);
   }
 
 }

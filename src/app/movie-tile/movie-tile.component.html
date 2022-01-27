@@ -1,4 +1,4 @@
-<div class="card w-100 movie-card bg-dark text-white text-center rounded">
+<div class="card w-100 movie-card bg-dark text-white text-center rounded" (click)="addMovie()">
     <img class="card-img-top img-fluid" [src]="movie.Poster" alt="movie.Title">
     <div class="card-body">
       <h5 class="card-title font-weight-bold">{{ movie.Title | uppercase }}</h5>

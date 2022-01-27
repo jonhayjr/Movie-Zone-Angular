@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { MovieTileComponent } from './movie-tile/movie-tile.component';
 import { FilterBoxComponent } from './filter-box/filter-box.component';
+import { FavoriteMoviesComponent } from './favorite-movies/favorite-movies.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     MovieTileComponent,
-    FilterBoxComponent
+    FilterBoxComponent,
+    FavoriteMoviesComponent
   ],
   imports: [
     BrowserModule,

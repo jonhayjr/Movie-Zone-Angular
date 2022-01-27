@@ -10,7 +10,8 @@ import { map } from 'rxjs/operators';
 export class AppComponent {
   title = 'Movie Zone';
   movies: any = [];
-  defaultSearch: string = 'marvel'
+  defaultSearch: string = 'marvel';
+  favoriteMovies: any = [];
 
   constructor(private movieService: MovieService) {}
 
@@ -31,5 +32,19 @@ export class AppComponent {
 
   handleMovieSearch(searchValue:any) {
     this.getMovies(searchValue);
+  }
+
+  addToFavorites(movie: any) {
+    this.favoriteMovies.push(movie);
+  }
+
+  removeFavoriteMovie(movie: any) {
+    const currentFavorites = [...this.favoriteMovies];
+
+    const newFavorites = currentFavorites.filter(m => {
+      return m.Title !== movie.Title;
+    })
+
+    this.favoriteMovies = newFavorites;
   }
 }
