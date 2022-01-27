@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { MovieTileComponent } from './movie-tile/movie-tile.component';
 import { FilterBoxComponent } from './filter-box/filter-box.component';
 import { FavoriteMoviesComponent } from './favorite-movies/favorite-movies.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FavoriteMoviesComponent } from './favorite-movies/favorite-movies.compo
     HeaderComponent,
     MovieTileComponent,
     FilterBoxComponent,
-    FavoriteMoviesComponent
+    FavoriteMoviesComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
