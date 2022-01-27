@@ -1,0 +1,7 @@
+.movie-card {
+    height: 550px;
+}
+
+.movie-card > img {
+    height: 450px;
+}
