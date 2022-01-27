@@ -9,6 +9,9 @@ export class MovieTileComponent implements OnInit {
 
   @Input() movie:any;
   @Output() addMovieEvent = new EventEmitter();
+  @Output() removeMovieEvent = new EventEmitter();
+  
+  addedToFavorites: boolean = false;
 
   constructor() { }
 
@@ -17,6 +20,12 @@ export class MovieTileComponent implements OnInit {
   
   addMovie() {
     this.addMovieEvent.emit(this.movie);
+    this.addedToFavorites = true;
+  }
+
+  removeMovie() {
+    this.removeMovieEvent.emit(this.movie);
+    this.addedToFavorites = false;
   }
 
 }

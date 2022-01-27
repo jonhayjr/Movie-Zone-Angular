@@ -2,7 +2,7 @@
 <app-header [title]="title"></app-header>
 <app-filter-box (searchEvent)="handleMovieSearch($event)"></app-filter-box>
 <p *ngIf="!movies" class="text-center h3 mt-2">No movies found.</p>
-<app-favorite-movies [favoriteMovies]="favoriteMovies" (removeFavoriteEvent)="removeFavoriteMovie($event)"></app-favorite-movies>
+<app-favorite-movies [favoriteMovies]="favoriteMovies"></app-favorite-movies>
 <div class="grid-container p-3">
-  <app-movie-tile *ngFor="let movie of movies" [movie]="movie" (addMovieEvent)="addToFavorites($event)"></app-movie-tile>
+  <app-movie-tile *ngFor="let movie of movies" [movie]="movie" (addMovieEvent)="addToFavorites($event)" (removeMovieEvent)="removeFavoriteMovie($event)"></app-movie-tile>
 </div>

@@ -1,8 +1,7 @@
 <div class="text-center mt-4 mb-4 w-75 mx-auto">
     <h2>Favorite Movies</h2>
     <p *ngIf="favoriteMovies.length <= 0" class="h6">You haven't selected any favorites.</p>
-    <div *ngFor="let favoriteMovie of favoriteMovies" class="mt-2 d-flex">
+    <div *ngFor="let favoriteMovie of favoriteMovies" class="mt-2">
         <p class="bg-dark text-white mt-2 mb-2 p-2 h4">{{ favoriteMovie.Title }}</p>
-        <button class="btn btn-secondary align-self-center mx-1" (click)="removeFavorite(favoriteMovie)">&times;</button>
     </div>
 </div>

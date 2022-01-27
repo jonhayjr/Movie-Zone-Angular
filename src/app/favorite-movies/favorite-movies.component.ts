@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-favorite-movies',
@@ -7,15 +7,11 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class FavoriteMoviesComponent implements OnInit {
   @Input() favoriteMovies: any = [];
-  @Output() removeFavoriteEvent = new EventEmitter();
-
+  
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  removeFavorite(movie: any) {
-    this.removeFavoriteEvent.emit(movie);
-  }
 
 }
