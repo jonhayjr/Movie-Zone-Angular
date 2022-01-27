@@ -9,13 +9,13 @@ import { map } from 'rxjs/operators';
 })
 export class AppComponent {
   title = 'Movie Zone';
-  movies$: any = [];
+  movies: any = [];
   defaultSearch: string = 'marvel'
 
   constructor(private movieService: MovieService) {}
 
   ngOnInit() {
-    this.movies$ = this.getMovies(this.defaultSearch);
+    this.getMovies(this.defaultSearch);
   }
 
   getMovies(search:string) {
@@ -23,10 +23,13 @@ export class AppComponent {
     .pipe(
       map((res:any) => res.Search)
     )
+    .subscribe(data => {
+      this.movies = data;
+    })
   }
 
 
   handleMovieSearch(searchValue:any) {
-    this.movies$ = this.getMovies(searchValue);
+    this.getMovies(searchValue);
   }
 }
