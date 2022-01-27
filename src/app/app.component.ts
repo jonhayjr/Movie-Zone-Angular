@@ -15,9 +15,18 @@ export class AppComponent {
   constructor(private movieService: MovieService) {}
 
   ngOnInit() {
-    this.movies$ = this.movieService.getMovies(this.defaultSearch)
-        .pipe(
-          map((res:any) => res.Search)
-        )
+    this.movies$ = this.getMovies(this.defaultSearch);
+  }
+
+  getMovies(search:string) {
+    return this.movieService.getMovies(search)
+    .pipe(
+      map((res:any) => res.Search)
+    )
+  }
+
+
+  handleMovieSearch(searchValue:any) {
+    this.movies$ = this.getMovies(searchValue);
   }
 }

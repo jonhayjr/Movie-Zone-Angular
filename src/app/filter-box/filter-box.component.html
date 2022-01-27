@@ -1,0 +1,4 @@
+<form class="input-group mb-3 w-75 mx-auto mt-3" autocomplete="off" #searchForm="ngForm" (ngSubmit)="submitSearch()">
+    <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Search for Movie" name="search" [(ngModel)]="search">
+    <button class="btn-secondary btn">Search</button>
+</form>

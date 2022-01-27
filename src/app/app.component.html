@@ -1,5 +1,7 @@
 
 <app-header [title]="title"></app-header>
+<app-filter-box (searchEvent)="handleMovieSearch($event)"></app-filter-box>
+<p *ngIf="!movies$">No movies found.</p>
 <div class="grid-container p-3">
   <app-movie-tile *ngFor="let movie of movies$ | async" [movie]="movie"></app-movie-tile>
 </div>
