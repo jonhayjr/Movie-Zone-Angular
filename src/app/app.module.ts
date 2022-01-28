@@ -10,6 +10,7 @@ import { MovieTileComponent } from './movie-tile/movie-tile.component';
 import { FilterBoxComponent } from './filter-box/filter-box.component';
 import { FavoriteMoviesComponent } from './favorite-movies/favorite-movies.component';
 import { FooterComponent } from './footer/footer.component';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FooterComponent } from './footer/footer.component';
     MovieTileComponent,
     FilterBoxComponent,
     FavoriteMoviesComponent,
-    FooterComponent
+    FooterComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,

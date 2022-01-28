@@ -12,6 +12,7 @@ export class AppComponent {
   movies: any[] = [];
   defaultSearch: string = 'marvel';
   favoriteMovies: any[] = [];
+  isLoading: boolean = false;
 
   constructor(private movieService: MovieService) {}
 
@@ -20,12 +21,16 @@ export class AppComponent {
   }
 
   getMovies(search:string) {
+    //Set isLoading to true 
+    this.isLoading = true;
+
     return this.movieService.getMovies(search)
     .pipe(
       map((res:any) => res.Search)
     )
     .subscribe(data => {
       this.movies = data;
+      this.isLoading = false;
     })
   }
 
