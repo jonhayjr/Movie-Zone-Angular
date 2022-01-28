@@ -1,5 +1,7 @@
 .movie-card {
     height: 640px;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .movie-card > img {
