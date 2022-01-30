@@ -11,6 +11,7 @@ import { FilterBoxComponent } from './filter-box/filter-box.component';
 import { FavoriteMoviesComponent } from './favorite-movies/favorite-movies.component';
 import { FooterComponent } from './footer/footer.component';
 import { SpinnerComponent } from './spinner/spinner.component';
+import { MovieViewComponent } from './movie-view/movie-view.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SpinnerComponent } from './spinner/spinner.component';
     FilterBoxComponent,
     FavoriteMoviesComponent,
     FooterComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    MovieViewComponent
   ],
   imports: [
     BrowserModule,
