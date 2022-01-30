@@ -15,4 +15,8 @@ export class FooterComponent implements OnInit {
     console.log(this.currentRoute)
   }
 
+  displayLinkContent() {
+    return this.currentRoute === 'about' ? '' : '?';
+  }
+
 }
