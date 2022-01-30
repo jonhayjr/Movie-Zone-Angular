@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { FavoriteMoviesComponent } from './favorite-movies/favorite-movies.compo
 import { FooterComponent } from './footer/footer.component';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { MovieViewComponent } from './movie-view/movie-view.component';
+import { AboutViewComponent } from './about-view/about-view.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +24,15 @@ import { MovieViewComponent } from './movie-view/movie-view.component';
     FavoriteMoviesComponent,
     FooterComponent,
     SpinnerComponent,
-    MovieViewComponent
+    MovieViewComponent,
+    AboutViewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

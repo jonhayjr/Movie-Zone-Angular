@@ -9,9 +9,11 @@ export class AppComponent {
   title = 'Movie Zone';
 
 
-  constructor() {}
-
-  ngOnInit() {
+  constructor() {
   }
 
+  ngOnInit() {
+
+  }
+  
 }
